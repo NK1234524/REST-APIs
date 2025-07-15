@@ -6,7 +6,8 @@ app.set("view engine","ejs");
 app.set("views",path.join(__dirname,"views"));
 app.use(express.static(path.join(__dirname,"public")));
 
-
+ app.use(express.json()); 
+app.use(express.urlencoded({ extended: true }));
 let posts = [
     {
         username : "Nishant kumar",
@@ -31,6 +32,15 @@ app.get("/posts",(req,res)=>{
 })
 app.get("/:Home",(req,res)=>{
     res.send("Welcome to Home")
+})
+app.get("/posts/new",(req,res)=>{
+    res.render("new.ejs")
+})
+app.post("/posts",(req,res)=>{
+    let{username,content}=req.body;
+    posts.push({username,content});
+    res.send("Posted");
+    console.log(req.body);
 })
 app.listen(port,()=>{
     console.log("listening to port 8080");
