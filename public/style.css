@@ -1,0 +1,17 @@
+#Quora{
+    color: maroon;
+}
+
+#username{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+    
+}
+#content{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: normal;
+}
+
+.element{
+    background-color: blanchedalmond;
+}
