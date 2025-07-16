@@ -42,15 +42,15 @@ app.get("/posts/new",(req,res)=>{
     res.render("new.ejs")
 })
 app.post("/posts",(req,res)=>{
-    let{username,content}=req.body || {};//to avoid destruction due to the JSON non implementation
-    posts.push({username,content});
+    let{username,content,id}=req.body || {};//to avoid destruction due to the JSON non implementation
+    posts.push({username,content,id});
     res.redirect("/posts");
     console.log(req.body);
 })
 
 app.get("/posts/:id",(req,res)=>{
     let {id}= req.params;
-    let post = posts.find((p)=>id===p.id);
+    let post = posts.find((p)=>id === p.id);
     console.log(post);
     res.send("Request sended");
 });
