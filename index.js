@@ -10,14 +10,17 @@ app.set("views",path.join(__dirname,"views"));
  app.use(express.urlencoded({ extended: true }));
 let posts = [
     {
+        id : "@nishantkumar",
         username : "Nishant kumar",
         content : "Hello world"
     },
     {
+        id : "@prashantkumar",
         username : "Prashant kumar",
         content : "Everything is good"
     },
     {
+        id : "@aksahra",
         username : "Aksahra",
         content : "Hardwork.."
     },
