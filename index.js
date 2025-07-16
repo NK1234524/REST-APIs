@@ -33,15 +33,19 @@ app.get("/posts",(req,res)=>{
 app.get("/Home",(req,res)=>{
     res.send("Welcome to Home")
 })
+
+
 app.get("/posts/new",(req,res)=>{
     res.render("new.ejs")
 })
 app.post("/posts",(req,res)=>{
-    let{username,content}=req.body;
+    let{username,content}=req.body || {};//to avoid destruction due to the JSON non implementation
     posts.push({username,content});
-    res.send("Posted");
+    res.redirect("/posts");
     console.log(req.body);
 })
+
+
 app.listen(port,()=>{
     console.log("listening to port 8080");
 });
