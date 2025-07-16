@@ -30,13 +30,14 @@ app.get("/",(req,res)=>{
     res.send("Welcome");
     console.log("Requesting");
 })
-app.get("/posts",(req,res)=>{
-    res.render("index.ejs",{posts});
-})
+
 app.get("/Home",(req,res)=>{
     res.send("Welcome to Home")
 })
 
+app.get("/posts",(req,res)=>{
+    res.render("index.ejs",{posts});
+})
 
 app.get("/posts/new",(req,res)=>{
     res.render("new.ejs")
