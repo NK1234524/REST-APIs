@@ -50,7 +50,7 @@ app.get("/posts/:id",(req,res)=>{
     let post = posts.find((p)=>id===p.id);
     console.log(post);
     res.send("Request sended");
-})
+});
 
 app.listen(port,()=>{
     console.log("listening to port 8080");
