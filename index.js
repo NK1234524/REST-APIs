@@ -20,7 +20,7 @@ let posts = [
         content : "Everything is good"
     },
     {
-        id : "@aksahra",
+        id : "@akshara",
         username : "Akshara",
         content : "Hardwork.."
     },
