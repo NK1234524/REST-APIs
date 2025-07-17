@@ -18,6 +18,9 @@
             </h4>
             <button><a href="http://localhost:8080/posts/<%=post.id%>">Open post</a></button>&nbsp;&nbsp;&nbsp;
             <button><a href="http://localhost:8080/posts/<%=post.id%>/edit">Edit post</a></button>
+            <form method="post" action="/posts/<%= post.id %>?_method=DELETE">                
+                <button>Delete post</button>
+            </form>
         </div>               
     <%}%>
     <br>
